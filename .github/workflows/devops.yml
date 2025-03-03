@@ -3,7 +3,7 @@ name: DevOps Dummy Pipeline
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   integration:
