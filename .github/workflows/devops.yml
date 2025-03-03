@@ -13,13 +13,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
       
-      - name: Print Hello World
+      - name: Build app
         run: |
-          echo "Hello World"
-          echo "Well, hi!" >> hi.txt
-      
-      - name: Collect artifact
+          dotnet build ConsoleApp1/
+          
+      - name: Collect executables
         uses: actions/upload-artifact@v4
         with:
-          name: hi-file
-          path: hi.txt
+          name: executables
+          path: ConsoleApp1/bin
